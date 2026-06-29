@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders - FreshPlate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="nav-bar.css">
+    <link rel="stylesheet" href="orders.css">
+    <script src="config.js" defer></script>
+    <script src="nav_bar.js" defer></script>
+    <script src="orders.js" defer></script>
+    <style>
+        .fp-cart-badge { display: none !important; }
+    </style>
+</head>
+<body>
+
+    <section class="orders-page">
+        <div class="orders-card">
+            <div class="orders-head">
+                <h1>My Orders</h1>
+                <div class="orders-links">
+                    <a href="cart.html">Cart</a>
+                    <a href="home.html">Home</a>
+                </div>
+            </div>
+            <div class="orders-tools">
+                <label for="statusFilter">Filter by status:</label>
+                <select id="statusFilter">
+                    <option value="">All</option>
+                    <option value="pending">Pending</option>
+                    <option value="paid">Paid</option>
+                    <option value="preparing">Preparing</option>
+                    <option value="delivered">Delivered</option>
+                    <option value="cancelled">Cancelled</option>
+                </select>
+            </div>
+            <p id="ordersMessage" class="orders-message"></p>
+            <div id="ordersList" class="orders-list"></div>
+        </div>
+    </section>
+</body>
+</html>
+
+
+

@@ -1,0 +1,520 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshPlate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="nav-bar.css">
+    <link rel="stylesheet" href="home.css">
+    <script src="config.js" defer></script>
+    <script src="nav_bar.js" defer></script>
+    <script src="home.js" defer></script>
+    <script src="common.js" defer></script>
+    <style>
+        .fp-cart-badge { display: none !important; }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="m1"> 
+            <i class="fa-solid fa-leaf fa-2xl"></i>
+            <div class="logo">
+                <h2>FreshPlate</h2>
+                <span>Eat Clean. Feel Strong.</span>
+            </div>
+        </div>
+
+        <nav class="nav-links2">
+            <a href="home.html">Home</a>
+            <a href="home.html#menu">Menu</a>
+            <a href="meal-planner.html">Meal Planner</a>
+            <a href="build_meal.php">Build Meal</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-right">
+            <div style="position:relative;display:inline-block;cursor:pointer" onclick="toggleCart()">
+                <i class="fa-solid fa-cart-shopping" style="width: 40px; height: 30px;"></i>
+              <span id="cart-count" style="display:none;position:absolute;top:-7px;right:-2px;
+              background:#2ecc71;color:white;border-radius:50%;padding:2px 6px;font-size:10px;
+              font-weight:bold;">0</span>
+            </div>
+            <button class="login-btn3" onclick="window.location.href='sign_in.html'">Login</button>
+            <div class="hamburger" aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+ <div class="slider-container">
+        <!-- شريط التمرير -->
+        <div class="slider">
+            <!-- صور السلايدر -->
+            <div class="slides">
+                <div class="slide active">
+                    <video autoplay loop muted >
+                     <source src="images/video1.mp4" type="video/mp4">
+                    </video>
+                    <div class="slide-content">
+                        <h2>Fuel Your Body, Ignite Your Day</h2>
+                        <p> Nutrient-packed meals designed to keep you moving at your peak performance.</p>
+                             <button class="cta-btn" onclick="window.location.href='meals.php'">Order now</button>
+                    </div>
+                </div>
+                <div class="slide">
+                   <video autoplay loop  muted>
+                     <source src="images/video2.mp4" type="video/mp4">
+                    </video>
+                    <div class="slide-content">
+                        <h2> Pure Refreshment in Every Drop</h2>
+                        <p> A cold-pressed blend of seasonal fruits to revitalize your senses and cool your day.</p>
+                         <button class="cta-btn" onclick="window.location.href='drinks.html'">Order now</button>
+                    </div>
+                </div>
+                <div class="slide">
+                   <video autoplay loop muted>
+                     <source src="images/video3.mp4" type="video/mp4">
+                    </video>
+                    <div class="slide-content">
+                        <h2> Healthy Never Tasted This Good</h2>
+                        <p>Discover the perfect balance of gourmet flavors and wholesome nutrition.</p>
+                         <button class="cta-btn" onclick="window.location.href='meals.php'">Order now</button>
+                    </div>
+                </div>
+                <div class="slide">
+                 <video autoplay loop  muted>
+                     <source src="images/video4.mp4" type="video/mp4">
+                    </video>
+                    <div class="slide-content">
+                        <h2>Salads That Taste Like a Celebration</h2>
+                        <p> Forget boring greens—discover our chef-curated recipes with homemade signature dressings.</p>
+                        <button class="cta-btn" onclick="window.location.href='salad.php'">Order now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- أزرار التنقل -->
+            <button class="prev-btn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <button class="next-btn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <!-- نقاط الترقيم -->
+            <div class="dots-container">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- About -->
+<section class="about">
+  <div class="about-content" id="about">
+    <img src="images/image30.png">
+    <div>
+      <h2>About <span>Us</span></h2>
+      <p>We believe that healthy eating should be simple, enjoyable,
+         and accessible for everyone. Our mission is to provide a variety of nutritious and delicious 
+         options that suit different tastes and lifestyles. 
+         We carefully select ingredients to ensure quality and freshness in every meal.
+          Whether you're looking for a quick bite or a balanced diet, we are here to support your journey. 
+          Together, we make healthy choices easier every day.</p>
+      <button onclick="window.location.href='about.html'">View More</button>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section>
+  <h2>Why choose our <span>Food</span></h2>
+ <div class="features">
+
+  <div class="feature-card">
+    <div class="icon"> <img src="images/image32.png"  width="128px"></div>
+    <h3>🌿 Quality 🌿 Ingredients</h3>
+    <p>We use only fresh, natural ingredients with no artificial 
+        additives to ensure every meal supports your health.</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon"><img src="images/image33.png"></div>
+    <h3>⚖️ Balanced ⚖️ Nutrition</h3>
+    <p>Every dish is carefully prepared to balance nutrition and flavor,
+         giving you a healthy meal without compromising taste.</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon"><img src="images/image34.png"></div>
+    <h3>💪 Fuel Your Body Right </h3>
+    <p>Whether you're staying fit or just eating better, 
+        our meals are made to support your daily energy and wellness.</p>
+  </div>
+
+</div>
+</section>
+
+<!-- Cards -->
+<section>
+  <h2>Most Popular <span>Food</span></h2>
+ <div class="food-slider">
+
+  <div class="food-slider-track" id="foodTrack">
+
+    <div class="food-slider-card">
+      <img src="images/image35.jpg">
+      <h3>Classic Tomato Soup</h3>
+      <p>Rich and creamy tomato soup made with fresh ingredients and a touch of herbs.</p>
+      <div class="food-slider-stars">⭐⭐⭐⭐⭐</div>
+      <p class="food-slider-price">$120.4</p>
+      <button class="food-slider-btn">Add to cart</button>
+    </div>
+
+    <div class="food-slider-card">
+      <img src="images/image36.jpg">
+      <h3>Grilled Chicken Plate</h3>
+      <p>Juicy grilled chicken served with creamy mashed potatoes and fresh roasted vegetables.</p>
+      <div class="food-slider-stars">⭐⭐⭐⭐⭐</div>
+      <p class="food-slider-price">$220.4</p>
+      <button class="food-slider-btn">Add to cart</button>
+    </div>
+
+    <div class="food-slider-card">
+      <img src="images/image37.jpg">
+       <h3>Strawberry Smoothie</h3>
+      <p>Refreshing strawberry smoothie made with fresh fruits and natural sweetness.</p>
+      <div class="food-slider-stars">⭐⭐⭐⭐⭐</div>
+      <p class="food-slider-price">$250.4</p>
+      <button class="food-slider-btn">Add to cart</button>
+    </div>
+
+    <div class="food-slider-card">
+      <img src="images/image38.jpg">
+      <h3>Croissant Sandwich</h3>
+      <p>Flaky croissant filled with fresh veggies and rich, savory flavors.</p>
+      <div class="food-slider-stars">⭐⭐⭐⭐⭐</div>
+      <p class="food-slider-price">$220.4</p>
+      <button class="food-slider-btn">Add to cart</button>
+    </div>
+
+      <div class="food-slider-card">
+      <img src="images/image39.jpg">
+      <h3>Creamy Cheesecake</h3>
+      <p> Smooth and creamy cheesecake with a light, perfectly balanced sweetness.</p>
+      <div class="food-slider-stars">⭐⭐⭐⭐⭐</div>
+      <p class="food-slider-price">$220.4</p>
+      <button class="food-slider-btn">Add to cart</button>
+    </div>
+  </div>
+
+  <div class="food-slider-controls">
+    <button onclick="prev()">‹</button>
+    <button onclick="next()">›</button>
+  </div>
+  <div class="food-slider-dots" id="foodDots"></div>
+</div>
+</section>
+
+<!-- Testimonials -->
+<section>
+  <div class="testimonial-wrapper">
+    <h2> What Our Customers <span>Say</span></h2>
+    <div class="box-img"> 
+         <div class="testimonial-box" id="test">
+            <div class="food-slider-stars">⭐⭐⭐⭐⭐</div>
+       <h3 id="t-name"></h3>
+       <p id="t-text"></p>
+       <div class="controls">
+         <div class="arrow" onclick="prevTest()">◀</div>
+         <div class="arrow" onclick="nextTest()">▶</div>
+       </div>
+       <div class="dots" id="dots"></div>
+    </div>
+      <div style="display:flex; flex-direction:column; align-items:center; gap:15px;">
+                <img src="images/image42.gif">
+                <a href="review.html"
+                   style="background:#2ecc71; color:white; padding:12px 28px; border-radius:25px;
+                          font-weight:700; text-decoration:none; font-size:0.95rem;
+                          box-shadow:0 4px 15px rgba(46,204,113,0.3); transition:background 0.3s;"
+                   onmouseover="this.style.background='#27ae60'"
+                   onmouseout="this.style.background='#2ecc71'">
+                    ✍️ Write a Review
+                </a>
+            </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="menu-section"   id="menu">
+        <header class="menu-header">
+            <h2>Explore Our <span>Menu</span></h2>
+            <p>From power-packed protein bowls to guilt-free desserts, we've got something for every craving</p>
+        </header>
+
+        <div class="menu-container">
+            <a href="salad.php">
+            <div class="menu-card" style="background-image: url('images/image43.jpg');">
+                <div class="overlay">
+                    <div class="content">
+                        <span class="icon0">🥗</span>
+                        <h3>Salads</h3>
+                    </div>
+                </div>
+            </div>
+            </a>
+
+            <a href="meals.php">
+            <div class="menu-card" style="background-image: url('images/image44.jpg');">
+                <div class="overlay">
+                    <div class="content">
+                        <span class="icon0">🍗 </span>
+                        <h3>Healthy Main Courses</h3>
+                    </div>
+                </div>
+            </div>
+            </a>
+
+            <a href="drinks.html">
+            <div class="menu-card" style="background-image: url('images/image45.jpg');">
+                <div class="overlay">
+                    <div class="content">
+                        <span class="icon0">🥤</span>
+                        <h3>Drinks</h3>
+                    </div>
+                </div>
+            </div>
+            </a>
+
+            <a href="sweet.php">
+            <div class="menu-card" style="background-image: url('images/image46.jpg');">
+                <div class="overlay">
+                    <div class="content">
+                        <span class="icon0">🍰</span>
+                        <h3>Healthy Desserts</h3>
+                    </div>
+                </div>
+            </div>
+            </a>
+
+            
+            <a href="sandwich&wrap_menu.html">
+            <div class="menu-card" style="background-image: url('images/image48.jpg');">
+                <div class="overlay">
+                    <div class="content">
+                        <div class="san-wrap-icon"> 
+                             <span class="icon0">🌯</span>
+                            <span class="icon0">🥪</span>
+                             </div>
+                        <h3>Healthy Sandwiches & Wraps </h3>
+                    </div>
+                </div>
+            </div>
+            </a>
+        </div>
+    </section>
+
+   <section id="cta">
+         <h2> Start Your Healthy <span>Journey Today </span></h2>
+        <p>Join thousands of happy customers who transformed their eating habits</p>
+        <button onclick="window.location.href='meal-planner.html'">Get Started &rarr;</button>
+  
+      </section>
+<section id="gallery-container">
+    <header>
+        <h2>gallery</h2>
+        <p>OF OUR RESTAURANT</p>
+    </header>
+    <div class="grid-layout" id="galleryGrid">
+        
+        <div style="grid-column:1/-1; text-align:center; padding:40px; color:#aaa;">
+            Loading gallery...
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+  <div class="container-footer">
+    <div class="footer-section brand">
+      <div class="logo">
+        <span class="icon"><i class="fa-solid fa-leaf"></i></span>
+        <h3>FreshPlate</h3>
+      </div>
+      <p>
+        Nourishing your body with wholesome, delicious meals that fuel your
+        healthy lifestyle.
+      </p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="home.html#menu">Menu</a></li>
+        <li><a href="meal-planner.html">Meal Planner</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section contact">
+      <h3>Contact</h3>
+      <p><i class="fa-solid fa-location-dot"></i> 123 Health Street, Wellness City</p>
+      <p><i class="fa-solid fa-phone"></i> (555) 123-4567</p>
+      <p><i class="fa-solid fa-envelope"></i> hello@freshplate.com</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <div class="social">
+        <a href="#"><img src="images/image18.png" ></a>
+        <a href="#"><img src="images/image19.png" ></a>
+        <a href="#"><img src="images/image20.png" ></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="copyright">
+    © 2026 FreshPlate. All rights reserved.
+  </div>
+</footer>
+<script>
+let foodIndex = 0;
+let productsData = [];
+let foodAutoInterval = null;
+
+function getFoodCardWidth() {
+    const card = document.querySelector('.food-slider-card');
+    return card ? card.offsetWidth + 20 : 0;
+}
+
+function updateFoodSlider() {
+    const track = document.getElementById('foodTrack');
+    
+    if (!track || productsData.length === 0) return;
+
+    const width = getFoodCardWidth();
+    
+    if (width === 0) {
+        requestAnimationFrame(updateFoodSlider);
+        return;
+    }
+
+    track.style.transform = `translateX(-${foodIndex * width}px)`;
+
+    document.querySelectorAll('.food-slider-dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === foodIndex);
+    });
+}
+
+function createFoodDots() {
+    const dotsContainer = document.getElementById('foodDots');
+    if (!dotsContainer) return;
+    dotsContainer.innerHTML = '';
+    productsData.forEach((_, i) => {
+        const span = document.createElement('span');
+        span.className = 'food-slider-dot' + (i === 0 ? ' active' : '');
+        span.onclick = () => { foodIndex = i; updateFoodSlider(); };
+        dotsContainer.appendChild(span);
+    });
+}
+
+window.nextFood = function () {
+    if (productsData.length === 0) return;
+    foodIndex = (foodIndex + 1) % productsData.length;
+    updateFoodSlider();
+};
+
+window.prevFood = function () {
+    if (productsData.length === 0) return;
+    foodIndex = (foodIndex - 1 + productsData.length) % productsData.length;
+    updateFoodSlider();
+};
+
+async function loadPopularProducts() {
+    try {
+        const response = await fetch(API_BASE + '/products/get_popular.php');
+        const data = await response.json();
+        const track = document.getElementById('foodTrack');
+        if (!track || !data.products || data.products.length === 0) return;
+
+        productsData = data.products;
+
+        track.innerHTML = productsData.map(product => `
+            <div class="food-slider-card" style="position:relative;">
+                <div class="food-card-badge"
+                     style="position:absolute; top:12px; left:50%; transform:translateX(-50%);
+                            background:rgba(255,255,255,0.92); padding:4px 12px;
+                            border-radius:20px; font-size:13px; font-weight:600;
+                            color:#333; white-space:nowrap; z-index:2;">
+                    ${product.calories} Cal
+                </div>
+                <img src="${product.image_url}" alt="${product.name}">
+                <h3>${product.name}</h3>
+                <p>${product.description}</p>
+                <div class="food-slider-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="food-slider-price">$${parseFloat(product.price).toFixed(2)}</p>
+                <button class="food-slider-btn" onclick="addToCart(${product.id})">Add to cart</button>
+            </div>`).join('');
+
+        createFoodDots();
+
+        requestAnimationFrame(() => {
+            foodIndex = 0;
+            updateFoodSlider();
+
+            if (foodAutoInterval) clearInterval(foodAutoInterval);
+            foodAutoInterval = setInterval(window.nextFood, 15000);
+        });
+
+    } catch (error) {
+        console.error("Failed to load products:", error);
+    }
+}
+
+  async function loadGallery() {
+    const grid = document.getElementById('galleryGrid');
+    if (!grid) return;
+ 
+    try {
+        const res  = await fetch(API_BASE + '/gallery/get.php');
+        const data = await res.json();
+ 
+        if (!data.success || data.images.length === 0) {
+            grid.innerHTML = '<p style="text-align:center;color:#aaa;padding:40px;">No images found.</p>';
+            return;
+        }
+ 
+        grid.innerHTML = data.images.map(img => `
+            <div class="photo">
+                <img src="${img.image_url}"
+                     alt="${img.alt_text}"
+                     onerror="this.parentElement.style.display='none'">
+            </div>`).join('');
+ 
+    } catch (err) {
+        console.error('Gallery load error:', err);
+        grid.innerHTML = '<p style="text-align:center;color:#aaa;padding:40px;">Could not load gallery.</p>';
+    }
+}
+ 
+document.addEventListener('DOMContentLoaded', () => {
+    updateCartUI();
+    loadPopularProducts();
+    loadGallery();
+ 
+    
+    window.addEventListener('resize', () => {
+        if (productsData.length > 0) updateFoodSlider();
+    });
+});
+</script>
+
+</body>
+</html>

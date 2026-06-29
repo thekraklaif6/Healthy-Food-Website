@@ -1,0 +1,302 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreshPlate | About</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="nav-bar.css">
+    <link rel="stylesheet" href="about.css">
+    <script src="config.js" defer></script>
+    <script src="nav_bar.js" defer></script>
+    <script src="about.js" defer></script>
+    <style>
+        .fp-cart-badge { display: none !important; }
+    </style>
+
+<body>
+
+    <header class="navbar">
+        <div class="m1"> 
+            <i class="fa-solid fa-leaf fa-2xl"></i>
+            <div class="logo">
+                <h2>FreshPlate</h2>
+                <span>Eat Clean. Feel Strong.</span>
+            </div>
+        </div>
+
+        <nav class="nav-links2">
+            <a href="home.html">Home</a>
+            <a href="home.html#menu">Menu</a>
+            <a href="meal-planner.html">Meal Planner</a>
+            <a href="build_meal.php">Build Meal</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-right">
+            <div style="position:relative;display:inline-block;cursor:pointer" onclick="toggleCart()">
+               <i class="fa-solid fa-cart-shopping" style="width: 40px; height: 30px;"></i>
+              <span id="cart-count" style="display:none;position:absolute;top:-7px;right:-2px;background:#2ecc71;color:white;border-radius:50%;padding:2px 6px;font-size:10px;font-weight:bold;">0</span>
+            </div>
+            <button class="login-btn3" onclick="window.location.href='sign_in.html'">Login</button>
+            <div class="hamburger" aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+<div class="fp-page">
+
+  <div class="fp-hero">
+    <div class="fp-hero-bg" aria-hidden="true">
+      <div class="fp-hero-bg-img"></div>
+      <div class="fp-hero-bg-fade"></div>
+    </div>
+    <div class="fp-hero-inner">
+      <div class="fp-tag">Our Story</div>
+      <h1>About <span>Fresh</span>Plate</h1>
+      <p>Transforming the way people eat — one nourishing, delicious meal at a time.</p>
+      <div class="fp-stats" id="fpStats">
+        <div>
+          <div class="fp-stat-num" data-count="8" data-suffix="+">0</div>
+          <div class="fp-stat-label">Years of craft</div>
+        </div>
+        <div>
+          <div class="fp-stat-num" data-count="50" data-suffix="k">0</div>
+          <div class="fp-stat-label">Happy customers</div>
+        </div>
+        <div>
+          <div class="fp-stat-num" data-count="100" data-suffix="%">0</div>
+          <div class="fp-stat-label">Organic sourced</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fp-story fp-reveal">
+    <div>
+      <div class="fp-story-label">Who we are</div>
+      <h2>Born from a simple belief</h2>
+      <p>FreshPlate was founded by nutrition experts and culinary artists who believed healthy food should be genuinely delicious, accessible, and convenient — not a compromise.</p>
+      <p>Every dish we create is thoughtfully designed to nourish your body while satisfying your taste buds. We source only the finest organic ingredients and partner with local farmers to ensure quality and sustainability.</p>
+    </div>
+    <div class="fp-img-grid">
+      <div class="fp-img-main">
+        <img src="images/image87 (1).jpg" alt="Fresh seasonal salad bowl" loading="lazy" width="400" height="600">
+      </div>
+      <div class="fp-img-sm">
+        <img src="images/image87 (2).jpg" alt="Green vegetables" loading="lazy" width="200" height="180">
+      </div>
+      <div class="fp-img-sm">
+        <img src="images/image88.jpg" alt="Citrus and fresh produce" loading="lazy" width="200" height="180">
+      </div>
+    </div>
+  </div>
+
+  <div class="fp-badges fp-reveal">
+    <div class="fp-badge">
+      <div class="fp-badge-icon green">🌿</div>
+      <div>
+        <h3>100% Organic</h3>
+        <p>Certified organic ingredients, free from pesticides and artificial additives.</p>
+      </div>
+    </div>
+    <div class="fp-badge">
+      <div class="fp-badge-icon amber">🏅</div>
+      <div>
+        <h3>Expert Crafted</h3>
+        <p>Every recipe developed by our nutritionists and award-winning chefs.</p>
+      </div>
+    </div>
+    <div class="fp-badge">
+      <div class="fp-badge-icon red">♥</div>
+      <div>
+        <h3>Made with Love</h3>
+        <p>We pour passion into every dish, ensuring a truly delightful experience.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="fp-wave fp-wave--cream-to-dark" aria-hidden="true">
+    <svg viewBox="0 0 1200 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#1E3A2F" d="M0,48 L0,12 Q200,0 400,14 Q600,28 800,12 Q1000,0 1200,14 L1200,48 Z"/>
+    </svg>
+  </div>
+
+  <div class="fp-values fp-reveal">
+    <div class="fp-values-top">
+      <h2>Our Values</h2>
+      <div class="fp-values-sub">The principles that guide everything we do.</div>
+    </div>
+    <div class="fp-values-grid">
+      <div class="fp-value-card">
+        <div class="fp-value-num">01 —</div>
+        <h3>Sustainability</h3>
+        <p>From eco-friendly packaging to supporting local farms, sustainability is at the heart of everything we do.</p>
+      </div>
+      <div class="fp-value-card">
+        <div class="fp-value-num">02 —</div>
+        <h3>Quality</h3>
+        <p>We never compromise. Every ingredient is carefully selected and every dish is prepared with meticulous attention.</p>
+      </div>
+      <div class="fp-value-card">
+        <div class="fp-value-num">03 —</div>
+        <h3>Transparency</h3>
+        <p>You have the right to know what you're eating. We provide complete nutritional information for every dish.</p>
+      </div>
+      <div class="fp-value-card">
+        <div class="fp-value-num">04 —</div>
+        <h3>Community</h3>
+        <p>We're more than a restaurant — a community of health-conscious individuals supporting each other's wellness journey.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="fp-wave fp-wave--dark-to-cream" aria-hidden="true">
+    <svg viewBox="0 0 1200 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#F5F0E8" d="M0,48 L0,24 Q300,4 600,22 Q900,40 1200,18 L1200,48 Z"/>
+    </svg>
+  </div>
+
+  <div class="fp-team fp-reveal" id="team">
+    <div class="fp-team-header">
+      <div class="fp-team-label">The kitchen</div>
+      <h2>Our <span>Chefs &amp; Experts</span></h2>
+      <p>Meet the people who craft every recipe, balance every plate, and keep FreshPlate honest to its promise.</p>
+    </div>
+    <div class="fp-team-grid">
+      <article class="fp-team-card" tabindex="0" aria-pressed="false">
+        <div class="fp-team-photo"><img src="images/image89.jpg" alt="Executive Chef" loading="lazy" width="400" height="400" onload="this.parentElement.classList.add('loaded')"></div>
+        <h3>Daniel Rivera</h3>
+        <p class="fp-team-role">Executive Chef</p>
+        <p class="fp-team-bio">Leads the kitchen with fifteen years in seasonal, health-forward cuisine.</p>
+      </article>
+      <article class="fp-team-card" tabindex="0" aria-pressed="false">
+        <div class="fp-team-photo"><img src="images/image90.jpg" alt="Head Nutritionist" loading="lazy" width="400" height="400" onload="this.parentElement.classList.add('loaded')"></div>
+        <h3>Dr. Emily Chen</h3>
+        <p class="fp-team-role">Head Nutritionist</p>
+        <p class="fp-team-bio">Designs balanced menus so every meal supports your goals without guesswork.</p>
+      </article>
+      <article class="fp-team-card" tabindex="0" aria-pressed="false">
+        <div class="fp-team-photo"><img src="images/image91.jpg" alt="Pastry Chef" loading="lazy" width="400" height="400" onload="this.parentElement.classList.add('loaded')"></div>
+        <h3>Sofia Martins</h3>
+        <p class="fp-team-role">Pastry Chef</p>
+        <p class="fp-team-bio">Creates lighter desserts that taste indulgent while staying mindful of ingredients.</p>
+      </article>
+      <article class="fp-team-card" tabindex="0" aria-pressed="false">
+        <div class="fp-team-photo"><img src="images/image92.jpg" alt="Sous Chef" loading="lazy" width="400" height="400" onload="this.parentElement.classList.add('loaded')"></div>
+        <h3>James Okonkwo</h3>
+        <p class="fp-team-role">Sous Chef</p>
+        <p class="fp-team-bio">Keeps quality and timing consistent from prep line to plate, every day.</p>
+      </article>
+    </div>
+  </div>
+
+  <div class="fp-reservation fp-reveal" id="reservation">
+    <div class="fp-reservation-inner">
+      <div class="fp-reservation-info">
+        <h2>Book a <span>Table</span> &amp; Contact</h2>
+        <p>Reserve a seat for dine-in or message us about events and catering—we reply within one business day.</p>
+        <ul class="fp-reservation-list">
+          <li><span aria-hidden="true">📍</span> 123 Health Street, Wellness City</li>
+          <li><span aria-hidden="true">📞</span> <a href="tel:+15551234567">(555) 123-4567</a></li>
+          <li><span aria-hidden="true">✉️</span> <a href="mailto:hello@freshplate.com">hello@freshplate.com</a></li>
+          <li><span aria-hidden="true">🕐</span> Daily 11:00 a.m. – 10:00 p.m.</li>
+        </ul>
+      </div>
+      <div class="fp-reservation-form-wrap">
+        <form id="fpReservationForm" action="#" method="post">
+          <div class="fp-field">
+            <span>Full name</span>
+            <input type="text" name="name" required placeholder="Your name" autocomplete="name">
+          </div>
+          <div class="fp-field">
+            <span>Email</span>
+            <input type="email" name="email" required placeholder="you@example.com" autocomplete="email">
+          </div>
+          <div class="fp-field">
+            <span>Phone</span>
+            <input type="tel" name="phone" placeholder="(555) 000-0000" autocomplete="tel">
+          </div>
+          <div class="fp-field-row">
+            <div class="fp-field">
+              <span>Date</span>
+              <input type="date" name="date" required>
+            </div>
+            <div class="fp-field">
+              <span>Time</span>
+              <input type="time" name="time" required>
+            </div>
+            <div class="fp-field">
+              <span>Guests</span>
+              <input type="number" name="guests" min="1" max="20" value="2" required>
+            </div>
+          </div>
+          <div class="fp-field">
+            <span>Message <span class="fp-optional">(optional)</span></span>
+            <textarea name="message" rows="4" placeholder="Allergies, occasion, or other requests"></textarea>
+          </div>
+          <button type="submit" class="fp-submit">Send request</button>
+          <p class="fp-form-note" id="fpFormNote" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="fp-cta fp-reveal">
+    <h2>Ready to start your healthy journey?</h2>
+    <button class="fp-btn" onclick="window.location.href='home.html#menu'">Explore Our Menu ↗</button>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="container-footer">
+    <div class="footer-section brand">
+      <div class="logo">
+        <span class="icon"><i class="fa-solid fa-leaf"></i></span>
+        <h3>FreshPlate</h3>
+      </div>
+      <p>
+        Nourishing your body with wholesome, delicious meals that fuel your
+        healthy lifestyle.
+      </p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="home.html#menu">Menu</a></li>
+        <li><a href="meal-planner.html">Meal Planner</a></li>
+        <li><a href="freshplate_about_redesign.html">About Us</a></li>
+        <li><a href="#reservation">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section contact">
+      <h3>Contact</h3>
+      <p><i class="fa-solid fa-location-dot"></i> 123 Health Street, Wellness City</p>
+      <p><i class="fa-solid fa-phone"></i> (555) 123-4567</p>
+      <p><i class="fa-solid fa-envelope"></i> hello@freshplate.com</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <div class="social">
+        <a href="#"><img src="images/image18.png" alt=""></a>
+        <a href="#"><img src="images/image19.png" alt=""></a>
+        <a href="#"><img src="images/image20.png" alt=""></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="copyright">
+    © 2026 FreshPlate. All rights reserved.
+  </div>
+</footer>
+</body>
+</html>
+

@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshPlate</title>
+    <link rel="stylesheet" href="sandwich&wrap_menu.css">
+    <script src="sandwich&wrap_menu.js" defer></script>
+    <script src="common.js" defer></script>
+    <script src="config.js" defer></script>
+    <link rel="stylesheet" href="nav-bar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .fp-cart-badge { display: none !important; }
+        body { padding-top: 80px; }
+    </style>
+    <script src="nav_bar.js" defer></script>
+
+<body>
+
+    <header class="navbar">
+        <div class="m1"> 
+            <i class="fa-solid fa-leaf fa-2xl"></i>
+            <div class="logo">
+                <h2>FreshPlate</h2>
+                <span>Eat Clean. Feel Strong.</span>
+            </div>
+        </div>
+
+        <nav class="nav-links2">
+            <a href="home.html">Home</a>
+            <a href="home.html#menu">Menu</a>
+            <a href="meal-planner.html">Meal Planner</a>
+            <a href="build_meal.php">Build Meal</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-right">
+            <div style="position:relative;display:inline-block;cursor:pointer" onclick="toggleCart()">
+              <i class="fa-solid fa-cart-shopping" style="width: 40px; height: 30px;"></i>
+              <span id="cart-count" style="display:none;position:absolute;top:-8px;right:-2px;background:#2ecc71;color:white;border-radius:50%;padding:2px 6px;font-size:10px;font-weight:bold;">0</span>
+            </div>
+            <button class="login-btn3" onclick="window.location.href='sign_in.html'">Login</button>
+            <div class="hamburger" aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide active">
+                    <img src="images/image1.jpeg" alt="Slide 1">
+                    <div class="slide-content">
+                        <h2>Fresh & Full of Flavor</h2>
+                        <p>Crispy wraps packed with vibrant veggies and perfectly grilled chicken — made to energize your day.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/image5.jpeg" alt="Slide 2">
+                    <div class="slide-content">
+                        <h2> Healthy Never Tasted Better</h2>
+                        <p> Balanced ingredients, rich flavors, and zero guilt in every single bite.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/image3.jpeg" alt="Slide 3">
+                    <div class="slide-content">
+                        <h2> Fuel Your Body Right</h2>
+                        <p> Wholesome meals crafted with fresh ingredients to keep you strong and satisfied.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/image12.jpeg" alt="Slide 4">
+                    <div class="slide-content">
+                        <h2>Wrap It. Love It. Enjoy It.</h2>
+                        <p> A delicious combination of freshness and taste, prepared daily just for you.</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="prev-btn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <button class="next-btn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <div class="dots-container">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+            </div>
+        </div>
+    </div>
+  <div class="menu-section"><br> <br> <br>
+    
+    <h2 >OUR MENU</h2> </div>
+    <br> <br> <br>
+    <div class="container">
+        <h1 class="page-title">
+            <i class="fas fa-bread-slice"></i>
+           Our delicious sandwiches
+            <i class="fas fa-bread-slice"></i>
+        </h1>
+        
+        <div class="cards-grid" id="cardsGrid">
+            <!-- Cards rendered dynamically by sandwich&wrap_menu.js -->
+        </div>
+    </div>
+
+    <br> <br> <br>
+
+    <footer class="footer">
+  <div class="container-footer">
+    <div class="footer-section brand">
+      <div class="logo">
+        <span class="icon"><i class="fa-solid fa-leaf"></i></span>
+        <h2>FreshPlate</h2>
+      </div>
+      <p>
+        Nourishing your body with wholesome, delicious meals that fuel your
+        healthy lifestyle.
+      </p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Meal Planner</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section contact">
+      <h3>Contact</h3>
+      <p><i class="fa-solid fa-location-dot"></i> 123 Health Street, Wellness City</p>
+      <p><i class="fa-solid fa-phone"></i> (555) 123-4567</p>
+      <p><i class="fa-solid fa-envelope"></i> hello@freshplate.com</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <div class="social">
+        <a href="#"><img src="images/image18.png" ></a>
+        <a href="#"><img src="images/image19.png" ></a>
+        <a href="#"><img src="images/image20.png" ></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="copyright">
+    © 2026 FreshPlate. All rights reserved.
+  </div>
+</footer>
+</body>
+</html>
